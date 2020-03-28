@@ -1,0 +1,61 @@
+{% extends 'basecontact.html' %}
+{% block title %} Create Order {% endblock title %}
+{% block content %}
+{% load static %}
+
+<!-- Contact Info -->
+
+	<div class="contact_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+      					{% for item in cart %}
+						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+							<div class="contact_info_image"><img src="{% static 'images/item.jpeg' %}" alt=""></div>
+							<div class="contact_info_content">
+								<div class="contact_info_title">{{ item.quantity }} piece{{ item.quantity|pluralize }} of {{ item.product.name }}</div>
+								<div class="contact_info_text">${{ item.total_price }}</div>
+							</div>
+						</div>
+						{% endfor %}
+						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start center">
+							<div class="contact_info_image"><img src="{% static 'images/item.jpeg' %}" alt=""></div>
+							<div class="contact_info_content">
+								<div class="contact_info_title">Total</div>
+								<div class="contact_info_text">${{ cart.get_total_price }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="contact_form">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="contact_form_container">
+						<div class="contact_form_title" style="text-align:center;">Create an Order</div>
+
+						<form action="." id="contact_form" method="post">
+							{% csrf_token %}
+							{% for field in form %}
+							<div class="contact_form_inputs justify-content-between align-items-between">
+								{{ field }} 
+							</div>
+							{% endfor %}
+							<div class="contact_form_button">
+								<input type="submit" class="button contact_submit_button" value="Place order">
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel"></div>
+	</div>
+
+{% endblock content %}
