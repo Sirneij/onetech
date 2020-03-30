@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from django import forms
 
 
@@ -8,7 +9,8 @@ class CartAddProductForm(forms.Form):
     quantity = forms.TypedChoiceField(
         choices=PRODUCT_QUANTITY_CHOICES,
         coerce=int,
-        widget=forms.NumberInput())
+        widget=forms.NumberInput(),
+        label=_('Quantity'))
     update = forms.BooleanField(required=False,
                                 initial=False,
                                 widget=forms.HiddenInput)

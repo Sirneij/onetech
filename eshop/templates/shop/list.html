@@ -2,7 +2,7 @@
 {% block title %}OneTech{% endblock %}
 {% block content %}
 {% load static %}	
-
+{% load i18n %}
 		<!-- Banner -->
 {% for p in phone %}
 	<div class="banner">
@@ -12,10 +12,10 @@
 				<div class="banner_product_image"><img src="{{ p.image.url }}" alt=""></div>
 				<div class="col-lg-5 offset-lg-4 fill_height">
 					<div class="banner_content">
-						<h1 class="banner_text">new era of smartphones</h1>
+						<h1 class="banner_text">{% trans "new era of smartphones" %}</h1>
 						<div class="banner_price"><span>$530</span>${{ p.price }}</div>
 						<div class="banner_product_name">{{ p.name }}</div>
-						<div class="button banner_button"><a href="{{ p.get_absolute_url }}">Shop Now</a></div>
+						<div class="button banner_button"><a href="{{ p.get_absolute_url }}">{% trans "Shop Now" %}</a></div>
 					</div>
 				</div>
 			</div>
@@ -34,8 +34,8 @@
 					<div class="char_item d-flex flex-row align-items-center justify-content-start">
 						<div class="char_icon"><img src="{% static "images/char_1.png" %}" alt=""></div>
 						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
+							<div class="char_title">{% trans "Free Delivery" %}</div>
+							<div class="char_subtitle">{% trans "from" %} $50</div>
 						</div>
 					</div>
 				</div>
@@ -46,8 +46,8 @@
 					<div class="char_item d-flex flex-row align-items-center justify-content-start">
 						<div class="char_icon"><img src="i{% static "images/char_2.png" %}" alt=""></div>
 						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
+							<div class="char_title">{% trans "Free Delivery" %}</div>
+							<div class="char_subtitle">{% trans "from" %} $50</div>
 						</div>
 					</div>
 				</div>
@@ -58,8 +58,8 @@
 					<div class="char_item d-flex flex-row align-items-center justify-content-start">
 						<div class="char_icon"><img src="{% static "images/char_3.png" %}" alt=""></div>
 						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
+							<div class="char_title">{% trans "Free Delivery" %}</div>
+							<div class="char_subtitle">{% trans "from" %} $50</div>
 						</div>
 					</div>
 				</div>
@@ -70,8 +70,8 @@
 					<div class="char_item d-flex flex-row align-items-center justify-content-start">
 						<div class="char_icon"><img src="{% static "images/char_4.png" %}" alt=""></div>
 						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
+							<div class="char_title">{% trans "Free Delivery" %}</div>
+							<div class="char_subtitle">{% trans "from" %} $50</div>
 						</div>
 					</div>
 				</div>
@@ -89,7 +89,7 @@
 					<!-- Deals -->
 
 					<div class="deals">
-						<div class="deals_title">Deals of the Week</div>
+						<div class="deals_title">{% trans "Deals of the Week" %}</div>
 						<div class="deals_slider_container">
 							
 							<!-- Deals Slider -->
@@ -110,29 +110,29 @@
 										</div>
 										<div class="available">
 											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Available: <span>6</span></div>
-												<div class="sold_title ml-auto">Already sold: <span>28</span></div>
+												<div class="available_title">{% trans "Available" %}: <span>6</span></div>
+												<div class="sold_title ml-auto">{% trans "Already sold" %}: <span>28</span></div>
 											</div>
 											<div class="available_bar"><span style="width:17%"></span></div>
 										</div>
 										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
 											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Hurry Up</div>
-												<div class="deals_timer_subtitle">Offer ends in:</div>
+												<div class="deals_timer_title">{% trans "Hurry Up" %}</div>
+												<div class="deals_timer_subtitle">{% trans "Offer ends in" %}:</div>
 											</div>
 											<div class="deals_timer_content ml-auto">
 												<div class="deals_timer_box clearfix" data-target-time="">
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span>hours</span>
+														<span>{% trans "hours" %}</span>
 													</div>
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span>mins</span>
+														<span>{% trans "mins" %}</span>
 													</div>
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span>secs</span>
+														<span>{% trans "secs" %}</span>
 													</div>
 												</div>
 											</div>
@@ -156,9 +156,9 @@
 						<div class="tabbed_container">
 							<div class="tabs">
 								<ul class="clearfix">
-									<li class="active">Featured</li>
-									<li>On Sale</li>
-									<li>Best Rated</li>
+									<li class="active">{% trans "Featured" %}</li>
+									<li>{% trans "On Sale" %}</li>
+									<li>{% trans "Best Rated" %}</li>
 								</ul>
 								<div class="tabs_line"><span></span></div>
 							</div>
@@ -182,13 +182,13 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<a href="{{ product.get_absolute_url }}"><button class="product_cart_button">Add to Cart</button></a>
+													<a href="{{ product.get_absolute_url }}"><button class="product_cart_button">{% trans "Add to Cart" %}</button></a>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
 											<ul class="product_marks">
 												<li class="product_mark product_discount">-25%</li>
-												<li class="product_mark product_new">new</li>
+												<li class="product_mark product_new">{% trans "new" %}</li>
 											</ul>
 										</div>
 									</div>

@@ -1,20 +1,19 @@
 {% extends 'basecontact.html' %}
-{% block title %} Create Order {% endblock title %}
+{% load i18n %}
+{% block title %} {% trans "Create Order" %} {% endblock title %}
 {% block content %}
 {% load static %}
-
 <div class="contact_form">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<div class="contact_form_container">
-						<div class="contact_form_title" style="text-align:center;">Your payment has not been processed</div>
-  <p>There was a problem processing your payment.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel"></div>
-	</div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="contact_form_container">
+                    <div class="contact_form_title" style="text-align:center;">{% trans "Your payment has not been processed" %}</div>
+                    <p>{% trans "There was a problem processing your payment." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel"></div>
+</div>
 {% endblock content %}

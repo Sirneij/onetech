@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-30 10:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cart/forms.py:13 templates/cart/detail.html:29
+msgid "Quantity"
+msgstr ""
+
+#: coupons/forms.py:6
+msgid "Coupon"
+msgstr ""
+
+#: eshop/settings.py:115
+msgid "English"
+msgstr ""
+
+#: eshop/settings.py:116
+msgid "Spanish"
+msgstr ""
+
+#: templates/cart/detail.html:2 templates/cart/detail.html:12
+msgid "Shopping Cart"
+msgstr ""
+
+#: templates/cart/detail.html:21
+msgid "Name"
+msgstr ""
+
+#: templates/cart/detail.html:25
+msgid "Color"
+msgstr ""
+
+#: templates/cart/detail.html:44
+msgid "Price per  unit"
+msgstr ""
+
+#: templates/cart/detail.html:48
+msgid "Remove"
+msgstr ""
+
+#: templates/cart/detail.html:52 templates/cart/detail.html:80
+#: templates/orders/create.html:33 templates/orders/created.html:33
+msgid "Total"
+msgstr ""
+
+#: templates/cart/detail.html:62
+#, python-format
+msgid ""
+"\n"
+"                    <div class=\"order_total\">\n"
+"                        <div class=\"order_total_content text-md-right\">\n"
+"                            <div class=\"order_total_title\">Subtotal</div>\n"
+"                            <div class=\"order_total_amount\">$"
+"%(cart.get_total_price|floatformat:\"2\")s</div>\n"
+"                        </div>\n"
+"                    </div>\n"
+"                    <div class=\"order_total\">\n"
+"                        <div class=\"order_total_content text-md-right\">\n"
+"                            <div class=\"order_total_title\">\"%(code)s\" "
+"coupon (%(discount)s%% off)</div>\n"
+"                            <div class=\"order_total_amount\">-$"
+"%(cart.get_discount|floatformat:\"2\")s</div>\n"
+"                        </div>\n"
+"                    </div>\n"
+"                    "
+msgstr ""
+
+#: templates/cart/detail.html:120
+msgid "Continue shopping"
+msgstr ""
+
+#: templates/cart/detail.html:121
+msgid "Check out"
+msgstr ""
+
+#: templates/orders/create.html:3 templates/orders/created.html:3
+#: templates/payment/cancelled.html:3 templates/payment/done.html:2
+msgid "Create Order"
+msgstr ""
+
+#: templates/orders/create.html:16 templates/orders/created.html:16
+msgid "piece"
+msgstr ""
+
+#: templates/orders/create.html:16 templates/orders/created.html:16
+msgid "of"
+msgstr ""
+
+#: templates/orders/create.html:25 templates/orders/created.html:25
+msgid "off"
+msgstr ""
+
+#: templates/orders/create.html:47
+msgid "Create an Order"
+msgstr ""
+
+#: templates/orders/create.html:56
+msgid "Place Order"
+msgstr ""
+
+#: templates/orders/created.html:47
+msgid "Order Response"
+msgstr ""
+
+#: templates/orders/created.html:48 templates/payment/done.html:11
+msgid "Thank you"
+msgstr ""
+
+#: templates/orders/created.html:49
+msgid "Your order has been successfully completed. Your order number is"
+msgstr ""
+
+#: templates/payment/cancelled.html:11
+msgid "Your payment has not been processed"
+msgstr ""
+
+#: templates/payment/cancelled.html:12
+msgid "There was a problem processing your payment."
+msgstr ""
+
+#: templates/payment/done.html:10
+msgid "Your payment was successful"
+msgstr ""
+
+#: templates/payment/done.html:12
+msgid "Your payment has been processed successfully."
+msgstr ""
+
+#: templates/payment/process.html:3 templates/payment/process.html:12
+msgid "Pay by credit card"
+msgstr ""
+
+#: templates/payment/process.html:16
+msgid "Card Number"
+msgstr ""
+
+#: templates/payment/process.html:18
+msgid "CVV"
+msgstr ""
+
+#: templates/payment/process.html:22
+msgid "Expiration Date"
+msgstr ""
+
+#: templates/shop/detail.html:66
+msgid "Add to cart"
+msgstr ""
+
+#: templates/shop/list.html:15
+msgid "new era of smartphones"
+msgstr ""
+
+#: templates/shop/list.html:18
+msgid "Shop Now"
+msgstr ""
+
+#: templates/shop/list.html:37 templates/shop/list.html:49
+#: templates/shop/list.html:61 templates/shop/list.html:73
+msgid "Free Delivery"
+msgstr ""
+
+#: templates/shop/list.html:38 templates/shop/list.html:50
+#: templates/shop/list.html:62 templates/shop/list.html:74
+msgid "from"
+msgstr ""
+
+#: templates/shop/list.html:92
+msgid "Deals of the Week"
+msgstr ""
+
+#: templates/shop/list.html:113
+msgid "Available"
+msgstr ""
+
+#: templates/shop/list.html:114
+msgid "Already sold"
+msgstr ""
+
+#: templates/shop/list.html:120
+msgid "Hurry Up"
+msgstr ""
+
+#: templates/shop/list.html:121
+msgid "Offer ends in"
+msgstr ""
+
+#: templates/shop/list.html:127
+msgid "hours"
+msgstr ""
+
+#: templates/shop/list.html:131
+msgid "mins"
+msgstr ""
+
+#: templates/shop/list.html:135
+msgid "secs"
+msgstr ""
+
+#: templates/shop/list.html:159
+msgid "Featured"
+msgstr ""
+
+#: templates/shop/list.html:160
+msgid "On Sale"
+msgstr ""
+
+#: templates/shop/list.html:161
+msgid "Best Rated"
+msgstr ""
+
+#: templates/shop/list.html:185
+msgid "Add to Cart"
+msgstr ""
+
+#: templates/shop/list.html:191
+msgid "new"
+msgstr ""
+
+#: templates/shop/topbar.html:38
+msgid "Register"
+msgstr ""
+
+#: templates/shop/topbar.html:39
+msgid "Sign in"
+msgstr ""
+
+#: templates/shop/topbar.html:65
+msgid "All Categories"
+msgstr ""
+
+#: templates/shop/topbar.html:86
+msgid "Wishlist"
+msgstr ""
+
+#: templates/shop/topbar.html:102
+msgid "Cart"
+msgstr ""
